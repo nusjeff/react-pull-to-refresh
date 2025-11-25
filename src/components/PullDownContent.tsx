@@ -6,7 +6,7 @@ export interface PullDownContentProps {
     label?: string;
 }
 
-export const PullDownContent: React.SFC<PullDownContentProps> = ({height = "200px", background = "none", label = "Pull down to refresh"}) => (
+export const PullDownContent: React.FC<PullDownContentProps> = ({height = "200px", background = "none", label = "Pull down to refresh"}) => (
     <div id="container2">
         <div id="arrow" />
         <span>{label}</span>
