@@ -8,9 +8,15 @@
     "experimentalDecorators": true,
     "declaration": true,
     "declarationDir": "./dist/",
-    "lib": ["es5", "es6", "dom", "ScriptHost"],
+    "lib": ["es5", "es6", "dom"],
     "jsx": "react",
-    "outDir": "./dist/"
+    "outDir": "./dist/",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node"
   },
   "exclude": [
     "node_modules"

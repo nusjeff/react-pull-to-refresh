@@ -1,16 +1,25 @@
 /* tslint:disable:no-implicit-dependencies */
 import * as React from "react";
-import {render} from "react-dom";
+import {createRoot} from "react-dom/client";
 import {AppContainer} from "react-hot-loader";
 import {Basic} from "../examples/Basic";
 
+let rootElement: HTMLElement | null = null;
+let root: ReturnType<typeof createRoot> | null = null;
+
 const renderExample = () => {
-    const root = document.getElementById("sample");
-    render(
+    const container = document.getElementById("sample");
+    if (!container) return;
+
+    if (!root) {
+        root = createRoot(container);
+        rootElement = container;
+    }
+
+    root.render(
         <AppContainer>
             <Basic />
-        </AppContainer>,
-        root,
+        </AppContainer>
     );
 };
 

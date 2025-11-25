@@ -5,7 +5,7 @@ export interface RefreshContentProps {
     background?: any;
 }
 
-export const RefreshContent: React.SFC<RefreshContentProps> = ({height = "200px", background = "none"}) => (
+export const RefreshContent: React.FC<RefreshContentProps> = ({height = "200px", background = "none"}) => (
     <div id="container">
         <div className="sk-fading-circle">
             <div className="sk-circle1 sk-circle" />
