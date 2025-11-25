@@ -2,9 +2,9 @@ import * as React from "react";
 import { DIRECTION, isTreeScrollable } from "../isScrollable";
 
 export interface PullToRefreshProps {
-  pullDownContent: JSX.Element;
-  releaseContent: JSX.Element;
-  refreshContent: JSX.Element;
+  pullDownContent: React.ReactElement;
+  releaseContent: React.ReactElement;
+  refreshContent: React.ReactElement;
   pullDownThreshold: number;
   onRefresh: () => Promise<any>;
   triggerHeight?: number | "auto";

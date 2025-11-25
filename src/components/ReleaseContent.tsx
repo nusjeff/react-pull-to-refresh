@@ -6,7 +6,7 @@ export interface ReleaseContentProps {
     label?: string;
 }
 
-export const ReleaseContent: React.SFC<ReleaseContentProps> = ({height = "200px", background = "none", label = "Release to refresh"}) => (
+export const ReleaseContent: React.FC<ReleaseContentProps> = ({height = "200px", background = "none", label = "Release to refresh"}) => (
     <div id="container">
         <div id="arrow"/>
         <span>{label}</span>
